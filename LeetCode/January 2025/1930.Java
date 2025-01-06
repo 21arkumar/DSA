@@ -1,4 +1,6 @@
 /*
+1930. Unique Length-3 Palindromic Subsequences
+
 Faster Solution
 Time Complexity: O(n);
 Algo: 
@@ -16,40 +18,47 @@ Algo:
 
 class Solution {
     public int countPalindromicSubsequence(String s) {
-        Set<Character> letters = new HashSet();
-        for(Character c : s.toCharArray()){
+        Set<Character> letters = new HashSet<>();
+
+        // Add all unique characters from the string to the HashSet
+        for (Character c : s.toCharArray()) {
             letters.add(c);
         }
 
         int total = 0;
 
-        for(Character letter : letters){
-            int i = -1;
-            int j = 0;
+        // Iterate through each unique character in the HashSet
+        for (Character letter : letters) {
+            int i = -1, j = 0;
 
-            for(int k = 0; k<s.length(); k++){
-                if(s.charAt(k) == letter){
-                    if(i == -1){
-                        i = k;
+            // Find the first and last occurrence of the character in the string
+            for (int k = 0; k < s.length(); k++) {
+                if (s.charAt(k) == letter) {
+                    if (i == -1) {
+                        i = k; // Record the first occurrence
                     }
-
-                    j = k;
+                    j = k; // Update the last occurrence
                 }
             }
 
-            Set<Character> between = new HashSet();
-            for(int k = i+1; k<j; k++){
+            // Collect all characters between the first and last occurrence
+            Set<Character> between = new HashSet<>();
+            for (int k = i + 1; k < j; k++) {
                 between.add(s.charAt(k));
             }
+
+            // Add the count of unique characters between i and j to the total
             total += between.size();
         }
 
-        return total;
+        return total; // Return the total count of palindromic subsequences
     }
 }
 
+
 /*
 Note: Code is Correct but exeeds time limit for larger testcases.
+Time Complexity: O(n^3)
 
 class Solution {
     public int countPalindromicSubsequence(String s) {
