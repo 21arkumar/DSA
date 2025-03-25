@@ -1,5 +1,5 @@
+/*CodeForces Question 1542A */
 package CodeForces;
-
 import java.util.*;
 public class A1542{
     public static void solve(int[] arr, int size){
