@@ -6,10 +6,10 @@ public class A2070 {
         int t = sc.nextInt();
         while(t-- > 0){
             long n = sc.nextInt();
-            int rem = (int)n%14;
-            int mul = (int)n/14;
-            System.out.println((mul*4)+rem);
+            long rem = n%15;
+            long mul = n/15;
+            System.out.println((mul*3)+ Math.min(rem + 1, 3));
         }
-        sc.nextInt();
+        sc.close();
     }
 }
