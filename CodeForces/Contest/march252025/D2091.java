@@ -18,5 +18,6 @@ public class D2091 {
             int k = sc.nextInt();
             benchLength(n, m, k);
         }
+        sc.close();
     }
 }
