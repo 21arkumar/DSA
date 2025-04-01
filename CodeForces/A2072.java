@@ -1,4 +1,4 @@
-package CodeForces.Contest.march252025;
+package CodeForces;
 
 import java.util.Scanner;
 
