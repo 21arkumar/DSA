@@ -1,4 +1,4 @@
-package CodeForces;
+
 import java.util.*;
 public class A144 {
     public static void totalSwap(int[] arr, int n){

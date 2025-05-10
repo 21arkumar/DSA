@@ -1,5 +1,5 @@
 //incomplete
-package CodeForces.Contest.march292025;
+package Contest.march292025;
 
 import java.util.Scanner;
 

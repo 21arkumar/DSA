@@ -1,4 +1,4 @@
-package CodeForces.Contest.march252025;
+package Contest.march252025;
 import java.util.*;
 public class B2091 {
     public static void main(String[] args) {

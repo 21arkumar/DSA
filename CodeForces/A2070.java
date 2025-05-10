@@ -1,4 +1,4 @@
-package CodeForces;
+
 import java.util.*;
 public class A2070 {
     public static void main(String[] args){
